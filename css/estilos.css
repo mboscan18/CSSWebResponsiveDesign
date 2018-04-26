@@ -37,7 +37,6 @@ header h1{
   text-align: left;
   text-shadow: 2px 2px 2px #02010a;
   margin: 0;
-  /**font-size: 2.5em;*/
 }
 header div{
   width: 65%;
@@ -112,7 +111,7 @@ footer p{
   padding: 10px;
 }
 #imagen-central{
-  width: 60%;
+  width: 90%;
 }
 .secundario{
   text-align: center;
@@ -211,10 +210,13 @@ header{
     width: 100%;
   }
   .contenido{
-    width: 100%;
+    width: 98%;
+  }
+  .central{
+    padding: 10px 0 10px 0;
   }
   #imagen-central{
-    width: 95%;
+    width: 100%;
   }
   .secundario{
     display: block;
