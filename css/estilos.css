@@ -1,0 +1,241 @@
+@font-face {
+  font-family: 'Lato-Italic';
+  src: url('../fuentes/Lato-Italic.ttf');
+}
+
+body{
+  font-family: Dancing Script;
+  background-color: #02010a;
+}
+img{
+  box-shadow: 2px 2px 2px 2px #02010a;
+}
+.contenido{
+  width: 900px;
+  margin: 0 auto;
+}
+a{
+  text-decoration: none;
+}
+a p{
+  color: black;
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+/** ESTILOS PARA EL HEADER **/
+
+header{
+  background-color: #5b7989;
+  color: #FFF;
+  display: flex;
+  border-radius: 10px 10px 0 0;
+  padding: 20px;
+}
+header h1{
+  color: white;
+  text-align: left;
+  text-shadow: 2px 2px 2px #02010a;
+  margin: 0;
+  /**font-size: 2.5em;*/
+}
+header div{
+  width: 65%;
+}
+header nav{
+  width: 35%;
+  perspective-origin: right;
+}
+header ul{
+  display: flex;
+}
+header li{
+  list-style: none;
+  width: 33.3%;
+}
+header li a{
+  color: #FFF;
+  text-decoration: underline;
+  font-size: 20px;
+}
+.active{
+  text-decoration: none;
+}
+
+/** ESTILOS PARA EL FOOTER **/
+
+footer{
+  background-color: #C6d5c5;
+  color: #000;
+  display: flex;
+  border-radius: 0 0 10px 10px;
+  padding: 25px;
+}
+.contacto, .terminos, .redes_sociales, .copyright{
+  width: 25%;
+  padding: 0 30px 10px 30px;
+}
+footer h1{
+  margin: 0;
+  margin-bottom: 10px;
+  text-align: center;
+}
+footer p{
+  margin: 0;
+  padding: 0;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+.redes_sociales ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.redes_sociales li{
+  padding: 0 0 6px 0;
+}
+.redes_sociales img{
+  width: 20px;
+  margin: 0;
+  box-shadow: none;
+}
+.redes_sociales a{
+  color: inherit;
+  text-decoration: none;
+}
+
+/** ESTILOS PARA EL CONTENIDO **/
+
+.central{
+  text-align: center;
+  background-color: #82c3a6;
+  padding: 10px;
+}
+#imagen-central{
+  width: 60%;
+}
+.secundario{
+  text-align: center;
+  background-color: #d5c75f;
+  border: 1px;
+  padding-top: 15px;
+  display: flex;
+}
+.secundario article{
+  width: 50%;
+}
+#imagen-secundaria-1{
+  width: 80%;
+  transition: all 1s;
+}
+#imagen-secundaria-2{
+  width: 80%;
+  transition: all 1s;
+}
+#imagen-secundaria-1:hover{
+  -ms-transform: rotate(10deg); /* IE 9 */
+  -webkit-transform: rotate(10deg); /* Chrome, Safari, Opera */
+  transform: rotate(10deg);
+  box-shadow: 2px 2px 2px 2px #82c3a6;
+}
+#imagen-secundaria-2:hover{
+  -ms-transform: translate(20px, 5px); /* IE 9 */
+	-webkit-transform: translate(20px, 5px); /* Chrome, Safari, Opera */
+	transform:translate(20px, -5px);
+  box-shadow: 2px 2px 2px 2px #82c3a6;
+}
+
+.galeria{
+  text-align: center;
+  background-color: #d5c75f;
+  border: 1px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+.galeria figure:nth-child(n+1){
+  width: 33.3%;
+  margin: 0;
+  padding: 10px 0 10px 0;
+}
+.galeria img{
+  width: 80%;
+}
+.galeria figure:nth-child(1){
+  -webkit-filter: blur(10px);
+  filter: blur(10px);
+}
+.galeria figure:nth-child(3){
+  -webkit-filter: sepia(90%);
+  filter: sepia(90%);
+}
+.galeria figure:nth-child(even){
+	-webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+/** ANIMACIONES **/
+
+@keyframes entrada-rebote {
+		0% {
+			margin-top: 150%;
+		}
+		60% {
+      margin-top: -5%;
+		}
+		100% {
+      margin-top: 0%;
+		}
+}
+
+header{
+  animation: entrada-rebote 1s;
+}
+
+/** VISION MÓVIL **/
+
+@media all and (max-width: 900px) {
+  header{
+    display: block;
+    text-align: center;
+  }
+  header h1{
+    text-align: center;
+  }
+  header div{
+    width: 100%;
+  }
+  header nav{
+    width: 100%;
+  }
+  .contenido{
+    width: 100%;
+  }
+  #imagen-central{
+    width: 95%;
+  }
+  .secundario{
+    display: block;
+  }
+  .secundario article{
+    width: 100%;
+    padding-bottom: 25px;
+  }
+  footer{
+    display: block;
+  }
+  footer h1{
+    text-align: left;
+  }
+  .contacto, .terminos, .redes_sociales, .copyright{
+    width: 100%;
+    padding: 0 10px 30px 10px;
+  }
+  .galeria figure:nth-child(n+1){
+    width: 100%;
+    margin: 0;
+    padding: 10px 0 20px 0;
+  }
+}
